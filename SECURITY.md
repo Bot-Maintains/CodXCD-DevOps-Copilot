@@ -57,7 +57,7 @@ We support and encourage responsible disclosure. Security researchers who report
 - [Responsible Disclosure Policy](https://github.com/Bot-Maintains/CodXCD-DevOps-Copilot/blob/main/SECURITY.md)
 
 ---
-sourav.xcd@gmail.com
+
 **[Email - Bishal Das](bishalcs4k@gmail.com)**
 
 Place this file as SECURITY.md in the root or .github directory of your repository.
