@@ -58,6 +58,6 @@ We support and encourage responsible disclosure. Security researchers who report
 
 ---
 
-**[Email - Bishal Das](bishalcs4k@gmail.com)**
+- **Bishal Das (bishalcs4k@gmail.com)**
 
 Place this file as SECURITY.md in the root or .github directory of your repository.
