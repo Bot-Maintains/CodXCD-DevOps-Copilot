@@ -1,0 +1,38 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/" # Root package.json
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "UTC"
+    assignees:
+      - morningstarxcdcode
+    reviewers:
+      - Bot-Maintains
+    labels:
+      - "dependencies"
+      - "auto-update"
+    ignore:
+      - dependency-name: "express"
+        versions: [">=4.17.1"]
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    open-pull-requests-limit: 5
+
+  - package-ecosystem: "yarn"
+    directory: "/frontend" # For a subdirectory, e.g. monorepo frontend
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "monthly"
