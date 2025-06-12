@@ -1,0 +1,71 @@
+import { Router } from 'express';
+import { getUserPlan, setUserPlan, PlanTier, PLAN_FEATURES } from '../utils/plan';
+
+const subscriptionRouter = Router();
+
+// Get user's current plan and features
+subscriptionRouter.get('/:userLogin', async (req, res) => {
+  try {
+    const userPlan = await getUserPlan(req.params.userLogin);
+    res.json(userPlan);
+  } catch (error) {
+    console.error('Error fetching subscription:', error);
+    res.status(500).json({ error: 'Failed to fetch subscription details' });
+  }
+});
+
+// Get available plans and their features
+subscriptionRouter.get('/plans', (_req, res) => {
+  res.json({
+    plans: {
+      free: {
+        name: 'Free',
+        features: PLAN_FEATURES.free,
+        price: 0
+      },
+      pro: {
+        name: 'Pro',
+        features: PLAN_FEATURES.pro,
+        price: 9.99
+      },
+      enterprise: {
+        name: 'Enterprise',
+        features: PLAN_FEATURES.enterprise,
+        price: 49.99
+      }
+    }
+  });
+});
+
+// Webhook endpoint for payment provider callbacks
+subscriptionRouter.post('/webhook', async (req, res) => {
+  const { userLogin, plan, event } = req.body;
+
+  // Validate webhook signature here
+  // Implementation depends on your payment provider (Stripe, GitHub Marketplace, etc.)
+
+  try {
+    switch (event) {
+      case 'subscription.created':
+      case 'subscription.updated':
+        const expiresAt = new Date();
+        expiresAt.setMonth(expiresAt.getMonth() + 1); // Set expiration to 1 month from now
+        await setUserPlan(userLogin, plan as PlanTier, expiresAt);
+        break;
+      
+      case 'subscription.deleted':
+        await setUserPlan(userLogin, 'free');
+        break;
+      
+      default:
+        console.warn('Unhandled webhook event:', event);
+    }
+
+    res.json({ success: true });
+  } catch (error) {
+    console.error('Error processing webhook:', error);
+    res.status(500).json({ error: 'Failed to process webhook' });
+  }
+});
+
+export default subscriptionRouter;

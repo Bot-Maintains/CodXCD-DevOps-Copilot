@@ -1,0 +1,64 @@
+# GitHub App Manifest for CodXCD
+name: CodXCD DevOps Copilot
+url: https://codxcd.com
+hook_attributes:
+  url: https://api.codxcd.com/api/webhooks
+redirect_url: https://codxcd.com/auth/callback
+callback_urls:
+  - https://codxcd.com/auth/callback
+public: true
+default_permissions:
+  # Repository permissions
+  contents: read
+  issues: write
+  pull_requests: write
+  checks: write
+  actions: read
+  deployments: write
+  environments: read
+  repository_projects: write
+  security_events: read
+  vulnerability_alerts: read
+  
+  # Account permissions
+  email: read
+  
+default_events:
+  # Installation events
+  - installation
+  - installation_repositories
+  
+  # Marketplace events
+  - marketplace_purchase
+  
+  # Repository events
+  - issues
+  - issue_comment
+  - pull_request
+  - pull_request_review
+  - pull_request_review_comment
+  
+  # CI/CD events
+  - workflow_run
+  - check_run
+  - check_suite
+  - deployment
+  - deployment_status
+  
+  # Security events
+  - repository_vulnerability_alert
+  - security_advisory
+  
+  # Project events
+  - project
+  - project_card
+  - project_column
+
+description: >
+  CodXCD is an AI-powered DevOps assistant that integrates with GitHub Copilot 
+  to provide intelligent automation for your development workflows. Track time, 
+  manage deployments, monitor security, and streamline your entire DevOps pipeline 
+  through natural language commands.
+
+setup_url: https://codxcd.com/setup
+setup_on_update: true

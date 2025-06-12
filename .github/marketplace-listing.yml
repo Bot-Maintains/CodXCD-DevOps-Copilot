@@ -1,0 +1,68 @@
+name: CodXCD DevOps Copilot
+tagline: AI-powered DevOps automation with GitHub Copilot integration
+description: |
+  CodXCD is a powerful DevOps automation platform that integrates with GitHub Copilot to provide intelligent code analysis, automated fixes, and comprehensive DevOps tooling through natural language interactions.
+
+categories:
+  - devops
+  - continuous-integration
+  - code-quality
+  - project-management
+  - security
+
+plans:
+  - name: Free
+    description: Basic DevOps automation for individuals
+    monthly:
+      price: 0
+      unit: user
+    features:
+      - 3 repositories
+      - Basic code analysis
+      - 10 AI credits per month
+      - Basic security scanning
+      - Community support
+
+  - name: Pro
+    description: Advanced features for professional developers
+    monthly:
+      price: 9.99
+      unit: user
+    features:
+      - 10 repositories
+      - Advanced code analysis
+      - 100 AI credits per month
+      - Priority support
+      - Advanced security features
+      - CI/CD automation
+      - Time tracking
+      - Feature trials
+
+  - name: Enterprise
+    description: Complete solution for teams and organizations
+    monthly:
+      price: 49.99
+      unit: user
+    features:
+      - Unlimited repositories
+      - Unlimited AI credits
+      - Custom integrations
+      - Team management
+      - Advanced analytics
+      - Priority support
+      - All Pro features
+      - Custom deployment options
+
+installation_notes: |
+  ## Quick Start
+  1. Install CodXCD from GitHub Marketplace
+  2. Authorize the app for your repositories
+  3. Access your dashboard at https://codxcd.com
+  
+  ## Support
+  - Documentation: https://docs.codxcd.com
+  - Email: support@codxcd.com
+  - Discord: https://discord.gg/codxcd
+
+terms_of_service_url: https://codxcd.com/terms
+privacy_policy_url: https://codxcd.com/privacy

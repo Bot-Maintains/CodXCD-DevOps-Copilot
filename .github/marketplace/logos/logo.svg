@@ -1,0 +1,112 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    /* Keyframes for the primary "flow" element */
+    @keyframes primary-flow {
+      0% {
+        stroke-dasharray: 0 600;
+        stroke-dashoffset: 0;
+      }
+      50% {
+        stroke-dasharray: 600 0;
+        stroke-dashoffset: -300; /* Moves it along the path */
+      }
+      100% {
+        stroke-dasharray: 0 600;
+        stroke-dashoffset: -600;
+      }
+    }
+
+    /* Keyframes for the angular brackets/chevrons forming the 'X' */
+    @keyframes bracket-pulse {
+      0%, 100% {
+        transform: scale(1) translateX(0px);
+        opacity: 1;
+      }
+      25% {
+        transform: scale(1.05) translateX(5px);
+        opacity: 0.9;
+      }
+      75% {
+        transform: scale(1.05) translateX(-5px);
+        opacity: 0.9;
+      }
+    }
+    
+    /* Keyframes for the AI glow */
+    @keyframes ai-pulse-unique {
+      0%, 100% {
+        r: 35;
+        opacity: 0.8;
+      }
+      50% {
+        r: 45;
+        opacity: 0.5;
+      }
+    }
+
+    /* Apply animations */
+    .flow-path {
+      animation: primary-flow 6s ease-in-out infinite;
+      stroke-dasharray: 0 600; /* Initialize for animation */
+      fill: none; /* Ensure no fill, only stroke animates */
+    }
+
+    .bracket-left {
+      animation: bracket-pulse 3s ease-in-out infinite alternate;
+      transform-origin: 230px 256px; /* Adjust origin to pivot point */
+    }
+
+    .bracket-right {
+      animation: bracket-pulse 3s ease-in-out infinite alternate-reverse; /* Reverse for complementary motion */
+      transform-origin: 282px 256px; /* Adjust origin to pivot point */
+    }
+
+    .ai-intelligence-dot {
+      animation: ai-pulse-unique 2.5s ease-in-out infinite;
+    }
+
+    /* General styling for elements */
+    .background-circle {
+      fill: #F0F8FF; /* Light background for contrast */
+      stroke: #E0E7FF;
+      stroke-width: 4;
+    }
+
+    .main-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 48px;
+      font-weight: bold;
+      fill: #2563EB; /* Royal Blue for text */
+    }
+
+  </style>
+
+  <!-- Background circle - subtle technology base -->
+  <circle cx="256" cy="256" r="250" class="background-circle"/>
+
+  <!-- Primary element: Abstract "X" formed by two dynamic, angular "bracket" shapes -->
+  <!-- Left bracket, symbolizing opening/start of code/process -->
+  <path class="bracket-left" d="M230 170 L170 256 L230 342" stroke="#10B981" stroke-width="35" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Right bracket, symbolizing closing/completion of code/process -->
+  <path class="bracket-right" d="M282 170 L342 256 L282 342" stroke="#10B981" stroke-width="35" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Flowing element representing "CD" (Continuous Delivery) or code flow -->
+  <!-- This path will animate to show continuous movement through the 'X' -->
+  <path class="flow-path" d="M100 256 C150 150, 362 150, 412 256 C362 362, 150 362, 100 256" stroke="#2563EB" stroke-width="20" stroke-linecap="round" fill="none"/>
+  
+  <!-- Accent element: A small, glowing circle at the intersection, representing "AI/intelligence" -->
+  <circle cx="256" cy="256" r="35" fill="#6366F1" class="ai-intelligence-dot"/>
+
+  <!-- Text "CodXCD" for brand recognition -->
+  <text x="256" y="490" text-anchor="middle" class="main-text">CodXCD</text>
+
+  <!-- Developer Comments: -->
+  <!-- Primary Color: #2563EB (Royal Blue) - Used for the main flowing path and text, symbolizing trust and technology. -->
+  <!-- Secondary Color: #10B981 (Emerald) - Used for the dynamic 'X' brackets, symbolizing success and automation. -->
+  <!-- Accent Color: #6366F1 (Indigo) - Used for the central "AI intelligence" glow. -->
+  <!-- The design features: -->
+  <!-- - Two angular "bracket" shapes that dynamically form an 'X', representing "Cod" (code syntax) and "X" (execution/exchange). -->
+  <!-- - A flowing royal blue path that weaves through the 'X', symbolizing "Continuous Delivery" and the fluid nature of code. -->
+  <!-- - A central pulsing indigo circle for AI intelligence. -->
+  <!-- - Animations `primary-flow`, `bracket-pulse`, and `ai-pulse-unique` create a cohesive and unique moving image. -->
+</svg>
