@@ -15,7 +15,7 @@ We support only the versions listed above with security updates. Users are stron
 
 Please help us keep CodXCD-DevOps-Copilot and its users safe by responsibly disclosing security issues.
 
-- **Contact:** [security@yourdomain.com] or [GitHub Security Advisories](https://github.com/Bot-Maintains/CodXCD-DevOps-Copilot/security/advisories)
+- **Contact:** sourav.xcd@gmail.com or [GitHub Security Advisories](https://github.com/Bot-Maintains/CodXCD-DevOps-Copilot/security/advisories)
 - **Information:** Include steps to reproduce, impact assessment, and any relevant logs or PoCs.
 - **Response:** We will acknowledge reports within 48 hours and provide progress updates until resolution.
 - **Disclosure:** Please do not disclose vulnerabilities publicly until we have resolved them and coordinated disclosure.
@@ -57,6 +57,6 @@ We support and encourage responsible disclosure. Security researchers who report
 - [Responsible Disclosure Policy](https://github.com/Bot-Maintains/CodXCD-DevOps-Copilot/blob/main/SECURITY.md)
 
 ---
-**Replace [sourav.xcd@gmail.com] with your actual contact email.**
+sourav.xcd@gmail.com
 
 Place this file as SECURITY.md in the root or .github directory of your repository.
