@@ -41,7 +41,7 @@
     "react-router-dom": "^6.15.0",
     "recharts": "^2.8.0",
     "stripe": "^18.2.1",
-    "tailwind-merge": "^1.14.0",
+    "tailwind-merge": "^3.3.0",
     "winston": "^3.10.0"
   },
   "devDependencies": {
